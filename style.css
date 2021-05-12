@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: url('/img/pexels-luis-dalvan-1770809.jpg'); */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/pexels-luis-dalvan-1770809.jpg') center fixed no-repeat;
+  color: white;
+}
+.frontdiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popupdiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 330px;
+  transform: translate(-50%, -50%);
+  color: black;
+  background: white;
+  border-radius: 20px;
+}
+.popupdiv p {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 30px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  background: #a2eec3;
+  padding: 10px;
+  border-radius: 10px;
+  animation: mymove 1.3s infinite;
+}
+@keyframes mymove {
+  from {
+    background-color: red;
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.2);
+
+    background-color: yellow;
+  }
+}
+.popupdiv.opvi {
+  transition: all .5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.frontdiv.opvi {
+  opacity: 0.1;
+
+  /* visibility: hidden; */
+}
+
+.popupdiv-child-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+  height: 40%;
+  background: url('/img/images.jfif');
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.close {
+  cursor: pointer;
+  border: 2px solid rgb(248, 248, 0);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 13px;
+  border-radius: 50%;
+}
+.close:hover {
+  color: red;
+  background: yellow;
+}
